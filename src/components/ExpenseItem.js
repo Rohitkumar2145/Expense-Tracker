@@ -1,12 +1,17 @@
 import "./ExpenseItem.css";
 
 function ExpenseItem() {
+  const expenseDate = new Date();
+  const expenseTitle = "Car Insurance";
+  const expenseAmount = 1475;
   return (
     <div className="expense-item">
-      <div>April 15th 2023</div>
+      <div>{`${expenseDate.getFullYear()}-${expenseDate.getDate()}-${
+        expenseDate.getMonth() + 1
+      }`}</div>
       <div className="expense-item__description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item__price">₹1475</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">₹{expenseAmount}</div>
       </div>
     </div>
   );
