@@ -30,7 +30,9 @@ const App = () => {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
-    console.log(expenses);
+    console.log(
+      expenses.filter((expense) => expense.date.getFullYear() === 2022)
+    );
   };
 
   return (
