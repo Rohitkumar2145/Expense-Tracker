@@ -13,7 +13,7 @@ const AddNewExpense = (props) => {
     setCheck(true);
   };
   let content =
-    check == false ? (
+    check === false ? (
       <div className="new-expense">
         <button onClick={clickHandler} type="submit">
           Add New Expense

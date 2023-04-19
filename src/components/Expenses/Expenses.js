@@ -13,7 +13,7 @@ const Expenses = (props) => {
     setFilteredYear(selectedYear);
   };
   const filteredExpenses = props.items.filter(
-    (ex) => filteredYear == ex.date.getFullYear().toString()
+    (ex) => filteredYear === ex.date.getFullYear().toString()
   );
   let expensesContent = <p className="expenseList_not">No Expenses Found</p>;
   if (filteredExpenses.length > 0) {
